@@ -1,38 +1,17 @@
-**Prescription Detection System with Drug Interaction Caution**
+This repository contains the implementation of the final year project by Viduni Ukwatta (20210087) at the Informatics Institute of Technology, in collaboration with Robert Gordon University, Aberdeen. The project aims to build an intelligent system that detects drug names from handwritten prescriptions and retrieves relevant medical information including usage, side effects, and interaction cautions.
 
-**Overview**
-The Prescription Detection System is an AI-powered solution designed to detect, interpret, and analyze handwritten and printed medical prescriptions. 
-This project aims to:
+Project Overview
+Medical prescriptions are often handwritten, which leads to misinterpretation and medication errors. This project integrates object detection, OCR, and NLP-based information retrieval to automatically extract and analyze prescription data.
 
--Identify drug names, dosages, and other prescription details using object detection.
--Extract text using OCR (Optical Character Recognition).
--Provide drug-related information (purpose, side effects, interactions) with NLP (Natural Language Processing).
+The core components of the system include:
 
-**Key Features**
+Faster R-CNN for detecting drug name regions in prescription images
 
--High-accuracy object detection with Faster R-CNN.
--Handwritten and printed text recognition with Tesseract OCR.
--Drug information retrieval using a BERT-based NLP model.
--Focus on real-time processing and user-friendly design.
+CRNN with CTC Loss for Optical Character Recognition (OCR)
 
-**Project Goals**
+BERT-based NLP model for retrieving drug information
 
-1. Prescription Detection:
-  Identify drug names and dosages with bounding boxes.
+Curated drug knowledge base for matching and verification
 
-2. Drug Information:
-  Provide details on drug purposes, side effects, and interactions.
+Gradio-based UI and batch pipeline support
 
-3. Usability:
-  Optimize the system for healthcare professionals and patient use.
-
-**Technologies Used**
-
-1. Object Detection: Faster R-CNN (fine-tuned on prescription datasets).
-
-2. OCR: Tesseract for text extraction from bounding boxes.
-
-3. NLP: BERT-based model fine-tuned for drug information retrieval.
-
-4. Libraries/Tools:
-PyTorch, Hugging Face Transformers, OpenCV, and LabelImg.
